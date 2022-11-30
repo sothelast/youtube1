@@ -7,14 +7,14 @@ import {BrowserRouter,Route,Routes,HashRouter,useNavigate} from "react-router-do
 function App() {
   return (
     <div className="App">
-      <BrowserRouter >
+      <HashRouter >
         <Routes>
           <Route path='/table' element={<Table/>}/>
           <Route path='/' element={<Router_dome/>}/>
           <Route path='/Products' element={<Products/>}/>
         </Routes>
       
-      </BrowserRouter>
+      </HashRouter>
   
     </div>
   );
