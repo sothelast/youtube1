@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Table from './component/Table';
+import Products from './component/Products/Product'
+import {BrowserRouter,Route,Routes,HashRouter,useNavigate} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter >
+        <Routes>
+          <Route path='/table' element={<Table/>}/>
+          <Route path='/' element={<Router_dome/>}/>
+          <Route path='/Products' element={<Products/>}/>
+        </Routes>
+      
+      </BrowserRouter>
+  
     </div>
   );
 }
 
 export default App;
+
+
+function Router_dome(){
+
+  const nevigate=useNavigate()
+  let startroute=(url)=>{
+    nevigate(url)
+  }
+return(
+<div>
+<div className="main-container">
+  <button className='button-to-route' onClick={()=>startroute("/table")}>Table I/O delet/Update</button>
+  <button className='button-to-route' onClick={()=>startroute("/Products")}>Products</button>
+</div>
+</div>
+);
+}
