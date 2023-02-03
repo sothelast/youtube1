@@ -10,7 +10,7 @@ import Tableinput from './component/Create simple input table/Tableinput';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <HashRouter >
         <Routes>
           <Route path='/table' element={<Table/>}/>
