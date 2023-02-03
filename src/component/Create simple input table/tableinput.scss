@@ -1,0 +1,115 @@
+
+input{
+  border: none;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(67, 65, 65,.2);
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+input:focus{
+  text-decoration: none;
+}
+input:focus-within{
+  border: 2px solid aqua;
+}
+.App{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+button{
+  width: auto;
+  padding:10px 30px;
+  margin: 10px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 10px rgba(67, 65, 65,.4);
+  font-size: 1.2rem;
+  border-radius: 200px;
+  cursor: pointer;
+}
+button:active{
+  color: red;
+  background-color: antiquewhite;
+}
+td,th{
+  text-align: center;
+}
+.buttonbox{
+display: inline;
+}
+.navagationtop{
+  width: 100%;
+  height: 60px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 10px rgba(52, 51, 51,.2);
+}
+.ullist{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ullist>li{
+  list-style: none;
+  margin: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.tablecontainer{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border: 1px solid green;
+  width: 100vw;
+  height: auto;
+}
+.inputsimpletable{
+  width: 140%;
+  padding: 0;
+  /* border: 2px solid red; */
+}
+
+
+
+.icon-box{
+  background-color: rgb(84, 84, 241);
+  ul{
+      list-style: none;
+      li{
+          float: right;
+          position: relative;
+          /* border: 1px solid red; */
+          overflow: hidden;
+          padding: 0 5px;
+          #icon{
+              color: rgb(182, 49, 49);
+              font-size: 33px;
+              padding: 15px;
+          }
+          &:nth-child(3)>.border{
+              position: absolute;
+              width: 50%;
+              height: 5px;
+              background-color: aqua;
+              bottom: 0;
+              left: -100%;
+              /* opacity: 0; */
+              animation: ani 1.2s linear infinite;
+              transition: all .8s;
+          }
+          @keyframes ani {
+              0%{
+              left: -100%;
+              }
+              100%{
+                  left: 100%;
+              }
+              
+          }
+      }
+  }
+}
