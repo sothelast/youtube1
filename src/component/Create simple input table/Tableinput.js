@@ -10,23 +10,26 @@ function App() {
         SetInputdata] = useState({name: "", rollNo: ""})
 
     function changehandle(e) {
-
-        SetInputdata({
-            ...inputdata,
-            [e.target.name]: e.target.value
-        })
+   
+        
+           SetInputdata({...inputdata,[e.target.name]: e.target.value})
+    
 
     }
 
     let {name, rollNo} = inputdata;
     function changhandle() {
+
+        if(name=="" && rollNo==""){
+            alert("Enter INPUT fields")
+          }else{
         setInputarr([
             ...inputarr, {
                 name,
                 rollNo
             }
         ])
-
+    }
         console.log(inputdata, "input data what we Enter")
         SetInputdata({name: "", rollNo: ""})
 
